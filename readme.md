@@ -48,13 +48,14 @@ To start the application locally:
 1. Set up your environment variables in a .env file:
    ```sh
   MONGO_URI=mongodb://localhost:27017/blog
-JWT_SECRET=your_jwt_secret
+  JWT_SECRET=your_jwt_secret
     ```
 2. Start the server:
    ```sh
    npm index.js 
     ```
 3. Open your browser or API client and go to http://localhost:5000.
+
 
 ## Folder Structure
 ```
