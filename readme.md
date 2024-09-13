@@ -40,20 +40,20 @@ Before you begin, ensure you have met the following requirements:
    ```
 3. Install the dependencies:
    ```sh
-   npm install
+   npm init -y
    ```
 
 ## Running the Application
 To start the application locally:
 1. Set up your environment variables in a .env file:
-   ```sh
+
   MONGO_URI=mongodb://localhost:27017/blog
 JWT_SECRET=your_jwt_secret
-   ```
+   
 2. Start the server:
-   ```sh
+
    npm index.js 
-   ```
+
 3. Open your browser or API client and go to http://localhost:5000.
 
 ## Folder Structure
@@ -80,20 +80,20 @@ blog-api/
 └── README.md
 ```
 
-## API Endpoints
+# API Endpoints
 
-# Authentication
+## Authentication
 - **Register** : `POST /auth/register`
 - **Login** : `POST /auth/login`
 
-# Posts
+## Posts
 - **Create Post** : `POST /posts`
 - **Get All Posts** : `GET /posts`
 - **Get Single Post** : `GET /posts/:id`
 - **Update Post** : `PUT /posts/:id`
 - **Delete Post** : `Delete /posts/:id`
 
-# Comments
+## Comments
 - **Create Comment**: `POST /comments`
 - **Get Comments for a Post**: `GET /comments?post_id=PostID`
 - **Get Single Comment**: `GET /comments/:id`
