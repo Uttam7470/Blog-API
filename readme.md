@@ -150,7 +150,7 @@ Contributions are welcome! Please follow these steps to contribute:
 
 **JWT secret**: myVerySecretJWTKey123!@#$%^&\*()
 
-## EndPoints For Post
+## Endpoints For Post
 
 1. **Create a Post**
    **Endpoint**: `POST /posts`
@@ -163,9 +163,11 @@ Contributions are welcome! Please follow these steps to contribute:
   - Content-Type: application/json
 - Body (JSON):
 
-{
-"title": "My First Post",
-"content": "This is the content of my first post."
+{ 
+
+     "title": "My First Post",
+     "content": "This is the content of my first post."
+
 }
 
 2. **Get All Posts**
@@ -200,8 +202,8 @@ Contributions are welcome! Please follow these steps to contribute:
 
   {
 
-  "title": "Updated Post Title",
-  "content": "This is the updated content of the post."
+      "title": "Updated Post Title",
+       "content": "This is the updated content of the post."
 
   }
 
@@ -268,7 +270,9 @@ Request:
   - Body (JSON):
 
   {
-  "content": "Updated comment content."
+
+        "content": "Updated comment     content."
+
   }
 
   5. **Delete a Comment**
