@@ -5,7 +5,6 @@ This is a RESTful API for managing blog posts and comments, built with Node.js, 
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
@@ -21,10 +20,6 @@ This is a RESTful API for managing blog posts and comments, built with Node.js, 
 - Create, read, update, and delete comments on posts.
 - Secure password hashing using bcrypt.
 - JSON Web Token (JWT) for secure authentication.
-
-## Demo
-
-A live demo of the application can be accessed at [Live Demo](/).
 
 ## Prerequisites
 
@@ -156,17 +151,21 @@ Contributions are welcome! Please follow these steps to contribute:
    **Endpoint**: `POST /posts`
    Request:
 
-- URL: `http://localhost:5000/posts`
+- URL: 
+
+       `http://localhost:5000/posts`
+
+
 - Method: POST
 - Headers:
   - Authorization: Bearer [Your JWT Token]
   - Content-Type: application/json
 - Body (JSON):
 
-{ 
+{      
 
-     "title": "My First Post",
-     "content": "This is the content of my first post."
+       "title": "My First Post",
+       "content": "This is the content   of  my first post."
 
 }
 
@@ -174,7 +173,11 @@ Contributions are welcome! Please follow these steps to contribute:
    **Endpoint**: `GET /posts`
    Request:
 
-- URL: `http://localhost:5000/posts`
+- URL: 
+
+        `http://localhost:5000/posts`
+
+
 - Method: GET
 - Headers:
   - Authorization: Bearer [Your JWT Token]
@@ -183,7 +186,11 @@ Contributions are welcome! Please follow these steps to contribute:
     **Endpoint**: `GET /posts/{id}`
     Request:
 
-- URL: `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
+ - URL:  
+ 
+       `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
+
+
 - Method: GET
 - Headers:
   - Authorization: Bearer [Your JWT Token]
@@ -192,7 +199,11 @@ Contributions are welcome! Please follow these steps to contribute:
    **Endpoint**: `PUT /posts/{id}`
    Request:
 
-- URL: `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
+- URL: 
+
+       `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
+
+
 - Method: PUT
 - Headers:
 
@@ -211,10 +222,16 @@ Contributions are welcome! Please follow these steps to contribute:
    **Endpoint**: `DELETE /posts/{id}`
    Request:
 
-- URL: `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
+- URL: 
+
+    
+       `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
+
+     
 - Method: DELETE
 - Headers:
   - Authorization: Bearer [Your JWT Token]
+
 
 ## Endpoints For Comment
 
@@ -245,27 +262,41 @@ Contributions are welcome! Please follow these steps to contribute:
 
 Request:
 
-- URL: `http://localhost:5000/comments?`
+- URL: 
+
+       `http://localhost:5000/comments?`
+
+
 - Method: GET
 - Headers:
   - Authorization: Bearer [Your JWT Token]
+
 
 3. **Get a Single Comment**
    **Endpoint**: `GET /comments/{id}`
 
 Request:
 
-- URL: `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
+- URL: 
+
+       `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
+
+
 - Method: GET
 - Headers:
   - Authorization: Bearer [Your JWT Token]
+
 
 4. **Update a Comment**
    **Endpoint**: `PUT /comments/{id}`
 
 Request:
 
-- URL: `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
+- URL: 
+
+       `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
+
+
 - Method: PUT
 - Headers:
 
@@ -279,15 +310,22 @@ Request:
 
   }
 
+
+
   5. **Delete a Comment**
      **Endpoint**: `DELETE /comments/{id}`
 
 Request:
 
-- URL: `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
+- URL: 
+
+       `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
+
+
 - Method: DELETE
 - Headers:
   - Authorization: Bearer [Your JWT Token]
+
 
 ## Testing Steps
 
