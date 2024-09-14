@@ -222,19 +222,23 @@ Contributions are welcome! Please follow these steps to contribute:
    **Endpoint**: `POST /comments`
    Request:
 
-- URL: `http://localhost:5000/comments`
+- URL: 
+       
+       `http://localhost:5000/comments`
+
+
 - Method: POST
 - Headers:
   - Authorization: Bearer [Your JWT Token]
   - Content-Type: application/json
 - Body (JSON):
 
-{
+   {
 
     "post_id": "60d5ec49f1b2a2b1c8e4f8f1",  //Replace with a valid post ID
     "content": "This is a new comment."
 
-}
+   }
 
 2. **Get All Comments for a Post**
    **Endpoint**: `GET /comments?post_id={post_id}`
@@ -271,7 +275,7 @@ Request:
 
   {
 
-        "content": "Updated comment     content."
+        "content": "Updated comment content."
 
   }
 
