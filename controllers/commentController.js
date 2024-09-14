@@ -8,9 +8,9 @@ export const createComment = async (req, res) => {
     try {
         const comment = new Comment({ post_id, content, author_id });
         await comment.save();
-        res.status(201).send(comment); 
+        res.status(201).json(comment); 
     } catch (error) {
-        res.status(500).send({ error: 'Server error' }); 
+        res.status(500).json({ error: 'Server error' }); 
     }
 };
 
@@ -22,9 +22,9 @@ export const getComments = async (req, res) => {
 
     try {
         const comments = await Comment.find({ post_id }).populate('author_id', 'username');
-        res.send(comments); 
+        res.json(comments); 
     } catch (error) {
-        res.status(500).send({ error: 'Server error' }); 
+        res.status(500).json({ error: 'Server error' }); 
     }
 };
 
@@ -35,11 +35,11 @@ export const getSingleComment = async (req, res) => {
     try {
         const comment = await Comment.findById(id).populate('author_id', 'username'); 
         if (!comment) {
-            return res.status(404).send({ error: 'Comment not found' }); 
+            return res.status(404).json({ error: 'Comment not found' }); 
         }
         res.send(comment); 
     } catch (error) {
-        res.status(500).send({ error: 'Server error' }); 
+        res.status(500).json({ error: 'Server error' }); 
     }
 };
 
@@ -51,11 +51,11 @@ export const updateComment = async (req, res) => {
     try {
         const comment = await Comment.findByIdAndUpdate(id, { content }, { new: true });
         if (!comment) {
-            return res.status(404).send({ error: 'Comment not found' }); 
+            return res.status(404).json({ error: 'Comment not found' }); 
         }
         res.send(comment); 
     } catch (error) {
-        res.status(500).send({ error: 'Server error' }); 
+        res.status(500).json({ error: 'Server error' }); 
     }
 };
 
@@ -66,10 +66,10 @@ export const deleteComment = async (req, res) => {
     try {
         const comment = await Comment.findByIdAndDelete(id);
         if (!comment) {
-            return res.status(404).send({ error: 'Comment not found' });
+            return res.status(404).json({ error: 'Comment not found' });
         }
         res.send({ message: 'Comment deleted successfully' });
     } catch (error) {
-        res.status(500).send({ error: 'Server error' }); 
+        res.status(500).json({ error: 'Server error' }); 
     }
 };

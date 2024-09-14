@@ -12,9 +12,9 @@ const router = express.Router();
 
 router.post("/", verifyToken, createComment);
 
-router.get("/", getComments);
+router.get("/", verifyToken,getComments);
 
-router.get("/:id", getSingleComment);
+router.get("/:id",verifyToken, getSingleComment);
 
 router.put("/:id", verifyToken, updateComment);
 

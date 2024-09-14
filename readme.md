@@ -134,3 +134,31 @@ Contributions are welcome! Please follow these steps to contribute:
 4. Commit your changes (`git commit -m 'Add some feature'`).
 5. Push to the branch (`git push origin feature-branch-name`).
 6. Open a pull request.
+
+
+
+## API Testing Documentation
+- This document outlines the process for testing the API endpoints using Postman.
+
+## Prerequisites
+
+**Postman** installed on your machine.
+**API running** locally at http://localhost:5000.
+**JWT secret**: myVerySecretJWTKey123!@#$%^&*()
+
+## Endpoints
+
+1. **Create a Comment**
+**Endpoint**: POST /comments
+Request:
+- URL: http://localhost:5000/comments
+- Method: POST
+- Headers:
+   - Authorization: Bearer [Your JWT Token]
+   - Content-Type: application/json
+- Body (JSON):
+
+{
+    "post_id": "60d5ec49f1b2a2b1c8e4f8f1",  // Replace with a valid post ID
+    "content": "This is a new comment."
+}
