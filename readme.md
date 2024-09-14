@@ -143,7 +143,9 @@ Contributions are welcome! Please follow these steps to contribute:
 ## Prerequisites
 
 **Postman** installed on your machine.
+
 **API running** locally at http://localhost:5000.
+
 **JWT secret**: myVerySecretJWTKey123!@#$%^&*()
 
 ## Endpoints
@@ -159,6 +161,8 @@ Request:
 - Body (JSON):
 
 {
-    "post_id": "60d5ec49f1b2a2b1c8e4f8f1",  // Replace with a valid post ID
+
+    "post_id": "60d5ec49f1b2a2b1c8e4f8f1",  //Replace with a valid post ID
     "content": "This is a new comment."
+
 }
