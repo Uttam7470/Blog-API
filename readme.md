@@ -145,15 +145,66 @@ Contributions are welcome! Please follow these steps to contribute:
 
 **JWT secret**: myVerySecretJWTKey123!@#$%^&\*()
 
+## Endpoints For Authentication
+
+1. **Register**
+   **Endpoint**: `POST /auth/register`
+
+
+- Request URL:
+
+       `http://localhost:5000/auth/register`
+
+- Method: POST
+- Headers:
+  - Authorization: Bearer [Your JWT Token]
+  - Body (JSON):
+
+{
+
+       "username": "johndoe",
+       "email": "johndoe@example.com",
+       "password": "mypassword123"
+
+}
+
+
+2. **Login**
+   **Endpoint**: `POST /auth/login`
+
+
+- Request URL:
+
+
+       `http://localhost:5000/auth/login`
+
+
+- Method: POST
+- Headers:
+  - Authorization: Bearer [Your JWT Token]
+  - Body (JSON):
+
+{
+
+      
+      "email": "johndoe@example.com",
+       "password": "mypassword123"
+
+
+}
+
+
+
+
 ## Endpoints For Post
 
 1. **Create a Post**
    **Endpoint**: `POST /posts`
-   Request:
 
-- URL: 
 
-       `http://localhost:5000/posts`
+- Request URL: 
+
+       `http://localhost:5000/posts`    
 
 
 - Method: POST
@@ -171,9 +222,8 @@ Contributions are welcome! Please follow these steps to contribute:
 
 2. **Get All Posts**
    **Endpoint**: `GET /posts`
-   Request:
 
-- URL: 
+- Request URL: 
 
         `http://localhost:5000/posts`
 
@@ -184,9 +234,9 @@ Contributions are welcome! Please follow these steps to contribute:
 
 3.  **Get a Single Post**
     **Endpoint**: `GET /posts/{id}`
-    Request:
+    
 
- - URL:  
+ - Request URL:  
  
        `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
 
@@ -197,9 +247,9 @@ Contributions are welcome! Please follow these steps to contribute:
 
 4. **Update Post**
    **Endpoint**: `PUT /posts/{id}`
-   Request:
+  
 
-- URL: 
+- Request URL: 
 
        `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
 
@@ -220,9 +270,9 @@ Contributions are welcome! Please follow these steps to contribute:
 
 5. **Delete a Post**
    **Endpoint**: `DELETE /posts/{id}`
-   Request:
 
-- URL: 
+
+- Request URL: 
 
     
        `http://localhost:5000/posts/60d5ec49f1b2a2b1c8e4f8f1` // Replace with a valid post ID
@@ -237,9 +287,9 @@ Contributions are welcome! Please follow these steps to contribute:
 
 1. **Create a Comment**
    **Endpoint**: `POST /comments`
-   Request:
 
-- URL: 
+
+- Request URL: 
        
        `http://localhost:5000/comments`
 
@@ -260,9 +310,9 @@ Contributions are welcome! Please follow these steps to contribute:
 2. **Get All Comments for a Post**
    **Endpoint**: `GET /comments?post_id={post_id}`
 
-Request:
 
-- URL: 
+
+- Request URL: 
 
        `http://localhost:5000/comments?`
 
@@ -275,9 +325,9 @@ Request:
 3. **Get a Single Comment**
    **Endpoint**: `GET /comments/{id}`
 
-Request:
 
-- URL: 
+
+- Request URL: 
 
        `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
 
@@ -290,9 +340,9 @@ Request:
 4. **Update a Comment**
    **Endpoint**: `PUT /comments/{id}`
 
-Request:
 
-- URL: 
+
+- Request URL: 
 
        `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
 
@@ -312,12 +362,11 @@ Request:
 
 
 
-  5. **Delete a Comment**
+  5.**Delete a Comment**
      **Endpoint**: `DELETE /comments/{id}`
 
-Request:
 
-- URL: 
+ - Request URL: 
 
        `http://localhost:5000/comments/60d5ec49f1b2a2b1c8e4f8f2` //Replace with a valid comment ID
 
@@ -325,6 +374,8 @@ Request:
 - Method: DELETE
 - Headers:
   - Authorization: Bearer [Your JWT Token]
+
+
 
 
 ## Testing Steps
